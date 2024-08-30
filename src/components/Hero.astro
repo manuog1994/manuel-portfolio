@@ -1,0 +1,61 @@
+---
+const personalImageAlt = "Miguel Ángel"
+import Badge from "@/components/Badge.astro"
+import LinkedInIcon from "@/components/icons/LinkedIn.astro"
+import CVIcon from "@/components/icons/CV.astro"
+import MailIcon from "@/components/icons/Mail.astro"
+import SocialPill from "@/components/SocialPill.astro"
+import GitHub from "./icons/GitHub.astro"
+---
+
+<div class="">
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+    <!-- <a
+      href="https://linkedin.com/in/manuelortegagaliano"
+      target="_blank"
+      rel="noopener"
+      class="flex items-center transition md:justify-center md:hover:scale-105"
+    >
+      <Badge>Escucho ofertas</Badge>
+    </a> -->
+    <div class="col-span-1 order-2 md:order-1">
+      <h1
+      class="text-4xl font-bold tracking-tight text-gray-800 sm:text-5xl dark:text-white"
+    >
+      Hola, soy Manuel Galiano
+    </h1>
+    <p
+      class="mt-6 text-xl text-gray-800 dark:[&>strong]:text-yellow-200 [&>strong]:text-yellow-500 [&>strong]:font-semibold dark:text-gray-300"
+    >
+      <strong
+        >Desarrollador de Web Fullstack</strong
+      >. Especializado en el desarrollo de aplicaciones web.
+    </p>
+    </div>
+    <div class="col-span-1 order-1 md:order-2">
+      <img
+        class="rounded-full shadow-lg size-56 m-auto"
+        src="/me.webp"
+        alt={personalImageAlt}
+      />
+    </div>
+  </div>
+  <nav class="flex flex-wrap gap-4 mt-8">
+    <SocialPill href="mailto:manuelortegagaliano@outlook.com">
+      <MailIcon class="size-4" />
+      Contáctame
+    </SocialPill>
+    <SocialPill href="https://linkedin.com/in/manuelortegagaliano">
+      <LinkedInIcon class="size-4" />
+      LinkedIn
+    </SocialPill>
+    <SocialPill href="https://github.com/manuog1994">
+      <GitHub class="size-4" />
+      GitHub
+    </SocialPill>
+    <SocialPill href="cv_manuelgaliano_desarrollador_fullstack.pdf" download="cv_manuelgaliano_desarrollador_fullstack.pdf">
+      <CVIcon class="size-4" />
+      CV
+    </SocialPill>
+  </nav>
+</div>

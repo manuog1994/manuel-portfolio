@@ -1,0 +1,30 @@
+---
+import ExperienceItem from "./ExperienceItem.astro"
+const EXPERIENCE = [
+  {
+    date: "Septiembre 2023 - Actualmente...",
+    title: "Desarrollador Web Fullstack",
+    company: "Schrödinger Group",
+    description:
+      "Desarrollando aplicaciones web para clientes y productos digitales para la empresa, haciendo incapié en desarrollos con integraciones de inteligencia artificial, para la generación de contenido digital usando diferentes modelos de IA.",
+    link: "https://schrodingergroup.com",
+  },
+  {
+    date: "Mayo 2021 - Enero 2024",
+    title: "Desarrollador Web",
+    company: "Freelance",
+    description:
+      "Diseño, desarrollo y despliegue de aplicaciones, ecommerce, landing page y software de facturación con distintos clientes. Dando soporte y mantenimiento a las mismas.",
+  },
+]
+---
+
+<ol class="relative mt-16">
+  {
+    EXPERIENCE.map((experience) => (
+      <li class="">
+        <ExperienceItem {...experience} />
+      </li>
+    ))
+  }
+</ol>
