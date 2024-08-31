@@ -6,12 +6,18 @@ import Link from "./icons/Link.astro"
 import LinkButton from "./LinkButton.astro"
 import Laravel from "./icons/Laravel.astro"
 import Wordpress from "./icons/Wordpress.astro"
+import Vue from "./icons/Vue.astro"
 
 const TAGS = {
   NUXT: {
-    name: "Nuxt.js",
+    name: "Nuxt",
     class: "bg-[#003159] text-white",
     icon: Nuxt,
+  },
+  VUE: {
+    name: "Vue.js",
+    class: "bg-[#003159] text-white",
+    icon: Vue,
   },
   TAILWIND: {
     name: "Tailwind CSS",
@@ -36,10 +42,10 @@ const PROJECTS = [
       "Diseño y desarrollo de Landing Page de la empresa de montaje de vallados.",
     link: "https://valladostrico.com/",
     image: "/projects/valladostrico.com.webp",
-    tags: [TAGS.NUXT, TAGS.TAILWIND],
+    tags: [TAGS.VUE, TAGS.TAILWIND],
   },
   {
-    title: "TriviCare",
+    title: "TriviCare Natural Cosmetics",
     description:
       "Desarrollo te toda la plataforma de ecommerce con API personalizada para la marca de cosmética (actualmente migrado a Wordpress).",
     link: "https://trivicare.com",
@@ -65,18 +71,18 @@ const PROJECTS = [
       {title}
     </h3>
     <div class="flex flex-wrap mt-2">
-      <ul class="grid grid-cols-2 md:grid-cols-4 mb-2 gap-2">
-          {tags.map((tag) => (
-            <li class="flex justify-center">
-              <span
-                class={`flex gap-x-2 items-center rounded-full text-xs ${tag.class} py-1 px-2 `}
-              >
-                <tag.icon class="size-5" />
-                {tag.name}
-              </span>
-            </li>
-          ))}
-        </ul>
+      <ul class="flex flex-wrap mb-2 gap-2">
+        {tags.map((tag) => (
+          <li class="flex justify-center">
+            <span
+              class={`flex gap-x-2 items-center text-nowrap rounded-full text-xs ${tag.class} py-1 px-2 `}
+            >
+              <tag.icon class="size-5" />
+              {tag.name}
+            </span>
+          </li>
+        ))}
+      </ul>
 
       <div class="mt-2 text-gray-700 dark:text-gray-400">{description}</div>
       <footer class="flex items-end justify-start mt-4 gap-x-4">
