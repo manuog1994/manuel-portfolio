@@ -7,12 +7,19 @@ import LinkButton from "./LinkButton.astro"
 import Laravel from "./icons/Laravel.astro"
 import Wordpress from "./icons/Wordpress.astro"
 import Vue from "./icons/Vue.astro"
+import React from "./icons/React.astro"
+import NativePHP from "./icons/NativePHP.astro"
 
 const TAGS = {
   NUXT: {
     name: "Nuxt",
     class: "bg-[#003159] text-white",
     icon: Nuxt,
+  },
+  REACT: {
+    name: "React",
+    class: "bg-[#003159] text-white",
+    icon: React,
   },
   VUE: {
     name: "Vue.js",
@@ -29,6 +36,11 @@ const TAGS = {
     class: "bg-[#003159] text-white",
     icon: Laravel,
   },
+  NATIVEPHP: {
+    name: "NativePHP",
+    class: "bg-[#003159] text-white",
+    icon: NativePHP,
+  },
   WORDPRESS: {
     name: "Wordpress",
     class: "bg-[#003159] text-white",
@@ -36,6 +48,14 @@ const TAGS = {
   }
 }
 const PROJECTS = [
+  {
+    title: "Conversor de Video",
+    description:
+      "Desarrollo de una aplicación de escritorio multiplataforma para convertir videos de cualquier formato a WebM.",
+    image: "/projects/conversor-video.webp",
+    tags: [TAGS.NATIVEPHP, TAGS.LARAVEL, TAGS.REACT, TAGS.TAILWIND],
+    github: "https://github.com/manuog1994/video-converter"
+  },
   {
     title: "Vallados TRICO",
     description:
